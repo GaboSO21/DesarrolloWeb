@@ -4,158 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <title>Tienda</title>
+    <!--la siguiente etiqueta es para usada para informar a los SEO de busqueda-->
+    <meta name="description" content="TechShop tienda en linea">
+    <meta name="keywords" content="html, css, ufidelitas, web">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 80px 20px 0;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: blue;
+            color: white;
+        }
+
+        #aside {
+            background-color: green;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 20%;
+            bottom: 20px;
+        }
+
+        #contenido {
+            position: fixed;
+            top: 80px;
+            left: 20%;
+            width: 80%;
+            bottom: 7%;
+            overflow: scroll;
+        }
+
+        #footer {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            bottom: 0;
+            background-color: beige;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body style=" background-color: black; ">
+<body>
 
-    <h1 id="arriba" style="text-align: center;color: white;">
-        Lec 01
-    </h1>
-    <ul>
-        <li><a href="#final">Final</a></li>
-        <li><a target="_blank" href="https://sistemas.ufidelitas.ac.cr">Ir a sistema academico</a></li>
-        <li><a href="ejemplo5.html">Next</a></li>
-    </ul>
+    <header id="header">
+        <h1 id="arriba" style="text-align: center;color: white;">
+            Lec 01
+        </h1>
+        <ul>
+            <li><a href="#final">Final</a></li>
+            <li><a target="_blank" href="https://sistemas.ufidelitas.ac.cr">Ir a sistema academico</a></li>
+            <li><a href="ejemplo5.html">Next</a></li>
+        </ul>
+    </header>
+    <aside id="aside">
+        <h2>Ultimas noticias....</h2>
+        <p>Los productos de la tecnologia x estan en descuento</p>
+    </aside>
+    <section class="encabezado">
 
-    <p style="text-align: center;color: white;">
-        <b>
-            Bold
-        </b>
-        <u>
-            Underlined
-        </u>
-    </p>
+        <article>
+            <header>
+                <h2></h2>
+            </header>
+            <figure>
+                <img src="imgs/71etKX4gaAL._SL1500_-1.webp" alt="Laptop">
+                <figcaption>La novedad ed la semana</figcaption>
+            </figure>
+            <footer id="footer">
+                <a href="#">Comprar</a>
+            </footer>
+        </article>
 
-    <hr>
-    <p style="text-align: center;color: white;">
-        Esto es un parrafo
-    </p>
-    <p style="text-align: center;color: white;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna
-        aliqua. Blandit massa enim nec dui nunc. Amet consectetur adipiscing elit duis tristique sollicitudin. Justo
-        eget
-        magna
-        fermentum iaculis eu non diam phasellus vestibulum. Ullamcorper a lacus vestibulum sed arcu non odio. Fringilla
-        ut
-        morbi
-        tincidunt augue interdum. Nec dui nunc mattis enim ut tellus. Sagittis eu volutpat odio facilisis mauris sit
-        amet.
-        Aliquam faucibus purus in massa tempor. Eget mauris pharetra et ultrices neque ornare aenean. Neque viverra
-        justo
-        nec
-        ultrices dui sapien eget. Ut eu sem integer vitae justo. Odio euismod lacinia at quis risus sed vulputate odio
-        ut.
-        Varius vel pharetra vel turpis. Id porta nibh venenatis cras sed felis eget velit.
-    </p>
-    <p style="text-align: right;color: white;">
-        Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Lorem ipsum dolor sit amet consectetur.
-        Pharetra
-        sit
-        amet aliquam id diam maecenas ultricies mi. Egestas egestas fringilla phasellus faucibus. Amet nulla facilisi
-        morbi
-        tempus iaculis urna id volutpat lacus. Volutpat sed cras ornare arcu dui vivamus. Eget gravida cum sociis
-        natoque
-        penatibus et magnis dis parturient. Ac turpis egestas integer eget aliquet nibh. Rutrum quisque non tellus orci
-        ac
-        auctor augue. Cursus turpis massa tincidunt dui. Dignissim sodales ut eu sem integer vitae. In hac habitasse
-        platea
-        dictumst vestibulum rhoncus est. Senectus et netus et malesuada fames ac turpis.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
-    <p style="text-align: left;color: white;">
-        Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
-        habitant
-        morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
-        mauris
-        sit
-        amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat commodo
-        sed
-        egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum velit
-        laoreet
-        id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
-        Mattis
-        rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis tristique
-        sollicitudin nibh. Velit scelerisque in dictum non consectetur.
-    </p>
+    </section> <!-- Aca va el contenido principal de la pagina-->
+    <div id="contenido">
+        <p style="text-align: center;">
+            <b>
+                Bold
+            </b>
+            <u>
+                Underlined
+            </u>
+        </p>
 
+        <hr>
+        <p>
+            Esto es un parrafo
+        </p>
+        <p style="text-align: center;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna
+            aliqua. Blandit massa enim nec dui nunc. Amet consectetur adipiscing elit duis tristique sollicitudin. Justo
+            eget
+            magna
+            fermentum iaculis eu non diam phasellus vestibulum. Ullamcorper a lacus vestibulum sed arcu non odio.
+            Fringilla
+            ut
+            morbi
+            tincidunt augue interdum. Nec dui nunc mattis enim ut tellus. Sagittis eu volutpat odio facilisis mauris sit
+            amet.
+            Aliquam faucibus purus in massa tempor. Eget mauris pharetra et ultrices neque ornare aenean. Neque viverra
+            justo
+            nec
+            ultrices dui sapien eget. Ut eu sem integer vitae justo. Odio euismod lacinia at quis risus sed vulputate
+            odio
+            ut.
+            Varius vel pharetra vel turpis. Id porta nibh venenatis cras sed felis eget velit.
+        </p>
+        <p style="text-align: right;">
+            Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Lorem ipsum dolor sit amet consectetur.
+            Pharetra
+            sit
+            amet aliquam id diam maecenas ultricies mi. Egestas egestas fringilla phasellus faucibus. Amet nulla
+            facilisi
+            morbi
+            tempus iaculis urna id volutpat lacus. Volutpat sed cras ornare arcu dui vivamus. Eget gravida cum sociis
+            natoque
+            penatibus et magnis dis parturient. Ac turpis egestas integer eget aliquet nibh. Rutrum quisque non tellus
+            orci
+            ac
+            auctor augue. Cursus turpis massa tincidunt dui. Dignissim sodales ut eu sem integer vitae. In hac habitasse
+            platea
+            dictumst vestibulum rhoncus est. Senectus et netus et malesuada fames ac turpis.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+        <p style="text-align: left;">
+            Sit amet tellus cras adipiscing enim eu turpis. Elit scelerisque mauris pellentesque pulvinar pellentesque
+            habitant
+            morbi tristique senectus. Tincidunt vitae semper quis lectus nulla at. Sagittis eu volutpat odio facilisis
+            mauris
+            sit
+            amet massa vitae. Sodales ut etiam sit amet. Amet luctus venenatis lectus magna fringilla urna. Volutpat
+            commodo
+            sed
+            egestas egestas. Felis imperdiet proin fermentum leo vel. Urna duis convallis convallis tellus id interdum
+            velit
+            laoreet
+            id. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Tristique senectus et netus et.
+            Mattis
+            rhoncus urna neque viverra justo nec ultrices dui sapien. Sit amet consectetur adipiscing elit duis
+            tristique
+            sollicitudin nibh. Velit scelerisque in dictum non consectetur.
+        </p>
+    </div>
+
+    <footer id="footer">
+        <p>Desarrollos tecnologicos 2023 &copy;</p>
+    </footer>
 
     <a id="final" href=""></a>
     <h5><a href="#arriba">Ir arriba</a></h5>
+
+    <section>
+        <p>
+            Letra <small>pequenna</small>
+        </p>
+    </section>
+
+
 </body>
 
 </html>
