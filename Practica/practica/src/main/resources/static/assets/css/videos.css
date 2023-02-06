@@ -1,0 +1,120 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDDDAA;
+}
+
+.header {
+    position: absolute;
+    background-color: #f1e7c5;
+    box-shadow: 0px 10px 5px gray;
+    height: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-logo-img {
+    display: flex;
+    height: 80px;
+    width: 90px;
+    margin-right: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 350px;
+    margin-left: 100px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 80px;
+    width: max-content;
+    text-decoration: none;
+    color: black;
+    transition: ease-in-out;
+}
+
+.nav-menu-item:hover {
+    color: rgb(119, 101, 81);
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.content {
+    position: absolute;
+    overflow: scroll;
+    background-color: #f1e7c5;
+    box-shadow: 10px 10px 5px gray;
+    top: 13%;
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+}
+
+.content-title {
+    position: absolute;
+    background-color: #fff4d1;
+    box-shadow: 10px 10px 2px gray;
+    top: 50px;
+    left: 30%;
+    right: 30%;
+}
+
+.content-title-txt {
+    font-size: 50px;
+    text-align: center;
+}
+
+.content-burger-video {
+    position: inherit;
+    box-shadow: 10px 10px 2px gray;
+    top: 25%;
+    right: 55%;
+}
+
+.content-drink-video {
+    position: inherit;
+    box-shadow: 10px 10px 2px gray;
+    top: 25%;
+    left: 55%;
+}
+
+.content-return {
+    position: absolute;
+    text-align: center;
+    background-color: #fff4d1;
+    box-shadow: 10px 10px 2px gray;
+    bottom: 50px;
+    left: 40%;
+    right: 40%;
+}
+
+.content-return-title {
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
