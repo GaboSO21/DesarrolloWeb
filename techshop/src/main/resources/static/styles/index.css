@@ -1,0 +1,31 @@
+* {
+    background-color: beige;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 30px;
+    height: 600px;
+    width: 70%;
+    border: solid;
+    line-height: 80px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row;
+    text-align: center;
+}
+
+.item3 {
+    height: 100px;
+    width: 100px;
+    border: solid;
+}
+
+.item2{
+    height: 100px;
+    width: 100px;
+    border: solid;
+}

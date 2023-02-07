@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/index.css}">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+
+    <section class="flex-container">
+
+        <div class="item2">
+            Hola 
+        </div>
+
+        <div class="item1">
+            <table border="1">
+                <thead>
+                    <th>Id</th>
+                    <th>Credito</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                </thead>
+
+                <tr th:each="cliente : ${clientes}">
+                    <td th:text="${cliente.id_cliente}"></td>
+                    <td th:text="${cliente.credito}"></td>
+                    <td th:text="${cliente.nombre}"></td>
+                    <td th:text="${cliente.apellidos}"></td>
+                    <td th:text="${cliente.correo}"></td>
+                    <td th:text="${cliente.telefono}"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="item3">
+            Hola
+        </div>
+
+    </section>
+
+    <footer>
+
+
+    </footer>
+</body>
+
+</html>
