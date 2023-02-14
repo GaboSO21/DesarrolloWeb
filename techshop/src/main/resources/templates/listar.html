@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/index.css}">
+    <title>Listar</title>
+</head>
+
+<body>
+    <header class="flex-container header">
+        <div class="header-sections">
+            <ul class="header-sections-list">
+                <li class="item"><a th:href="@{/}" th:text="Inicio"></a></li>
+                <li class="item"><a th:href="@{/cliente/listar}" th:text="Listar"></a></li>
+                <li class="item"><a th:href="@{/cliente/agregar}" th:text="Agregar"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="flex-container section">
+
+        <div class="item1" th:if="${!clientes.empty}">
+            <table border="1">
+                <thead>
+                    <th>Id</th>
+                    <th>Credito</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                </thead>
+
+                <tr th:each="cliente : ${clientes}">
+                    <td th:text="${cliente.id_cliente}"></td>
+                    <td th:text="${cliente.credito}"></td>
+                    <td th:text="${cliente.nombre}"></td>
+                    <td th:text="${cliente.apellidos}"></td>
+                    <td th:text="${cliente.correo}"></td>
+                    <td th:text="${cliente.telefono}"></td>
+                    <td><a th:href="@{/cliente/eliminar/} + ${cliente.id_cliente} " th:text="Eliminar"></a></td>
+                    <td><a th:href="@{/cliente/editar/} + ${cliente.id_cliente} " th:text="Editar"></a></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="item1" th:if="${clientes.empty}">
+            <h2>
+                Lista vacia. 💀🪦
+            </h2>
+        </div>
+
+    </section>
+
+    <footer>
+
+
+    </footer>
+</body>
+
+</html>

@@ -57,6 +57,13 @@ li {
     text-align: center;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .item3 {
     height: 100px;
     width: 100px;

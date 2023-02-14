@@ -8,40 +8,22 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="flex-container header">
+        <div class="header-sections">
+            <ul class="header-sections-list">
+                <li class="item"><a th:href="@{/}" th:text="Inicio"></a></li>
+                <li class="item"><a th:href="@{/cliente/listar}" th:text="Listar"></a></li>
+                <li class="item"><a th:href="@{/cliente/agregar}" th:text="Agregar"></a></li>
+            </ul>
+        </div>
     </header>
 
-    <section class="flex-container">
-
-        <div class="item2">
-            Hola 
-        </div>
+    <section class="flex-container section">
 
         <div class="item1">
-            <table border="1">
-                <thead>
-                    <th>Id</th>
-                    <th>Credito</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo</th>
-                    <th>Telefono</th>
-                </thead>
-
-                <tr th:each="cliente : ${clientes}">
-                    <td th:text="${cliente.id_cliente}"></td>
-                    <td th:text="${cliente.credito}"></td>
-                    <td th:text="${cliente.nombre}"></td>
-                    <td th:text="${cliente.apellidos}"></td>
-                    <td th:text="${cliente.correo}"></td>
-                    <td th:text="${cliente.telefono}"></td>
-                </tr>
-
-            </table>
-        </div>
-        <div class="item3">
-            Hola
+            <h1>
+                Clientes
+            </h1>
         </div>
 
     </section>
