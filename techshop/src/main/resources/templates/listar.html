@@ -20,8 +20,8 @@
 
     <section class="flex-container section">
 
-        <div class="item1" th:if="${!clientes.empty}">
-            <table border="1">
+        <!-- <div class="item1" th:if="${!clientes.empty}"> -->
+        <!-- <table class="table-clientes" border="1">
                 <thead>
                     <th>Id</th>
                     <th>Credito</th>
@@ -44,14 +44,31 @@
                     <td><a th:href="@{/cliente/editar/} + ${cliente.id_cliente} " th:text="Editar"></a></td>
                 </tr>
 
-            </table>
+            </table> -->
+
+        <div>
+            <h1>
+                Clientes
+            </h1>
         </div>
 
-        <div class="item1" th:if="${clientes.empty}">
+        <div class="div-clientes" th:each="cliente : ${clientes}">
+            <h2 class="div-clientes nombre" th:text="${cliente.nombre}"></h2>
+            <ul class="div-clientes lista">
+                <li>Apellidos: [[${cliente.apellidos}]]</li>
+                <li>Correo: [[${cliente.correo}]]</li>
+                <li>Telefono: [[${cliente.telefono}]]</li>
+                <li>Id: [[${cliente.id_cliente}]]</li>
+            </ul>
+        </div>
+
+        <!-- </div> -->
+
+        <!-- <div class="item1" th:if="${clientes.empty}">
             <h2>
                 Lista vacia. 💀🪦
             </h2>
-        </div>
+        </div> -->
 
     </section>
 

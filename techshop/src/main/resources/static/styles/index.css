@@ -44,17 +44,12 @@ li {
 .section{
     display: flex;
     margin-top: 30px;
-    margin-left: 25%;
-    height: 600px;
-    width: 50%;
-    border: solid;
-    line-height: 80px;
-    flex-wrap: nowrap;
-    justify-content: center;
+    margin-left: 15%;
+    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    align-content: space-around;
-    flex-direction: row;
-    text-align: center;
 }
 
 .item3 {
@@ -67,4 +62,37 @@ li {
     height: 100px;
     width: 100px;
     border: solid;
+}
+
+.table-clientes {
+    overflow: scroll1;
+}
+
+.div-clientes {
+    border: solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+    height: 200px;
+    box-shadow: 10px 10px 2px gray;
+}
+
+.nombre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 150px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 170px;
+    width: 300px;
 }
