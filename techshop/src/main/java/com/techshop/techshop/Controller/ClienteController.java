@@ -4,11 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.techshop.techshop.Model.Cliente;
 import com.techshop.techshop.Service.*;
 
 @Controller
+@RequestMapping("/cliente")
 public class ClienteController {
 
     private ClienteService clienteService;
@@ -17,39 +19,34 @@ public class ClienteController {
         this.clienteService = clienteService;
     }
 
-    @GetMapping("/")
-    public String inicio(Model model) {
-        return "index";
-    }
-
-    @GetMapping("/cliente/listar")
+    @GetMapping("/listar")
     public String listar(Model model) {
         model.addAttribute("clientes", clienteService.listarClientes());
-        return "listar";
+        return "/cliente/listar";
     }
 
-    @GetMapping("/cliente/agregar")
+    @GetMapping("/agregar")
     public String agregarCliente(Cliente cliente) {
-        return "agregar";
+        return "/cliente/agregar";
     }
 
-    @PostMapping("/cliente/guardar")
+    @PostMapping("/guardar")
     public String guardarCliente(Cliente cliente) {
         clienteService.saveCliente(cliente);
         return "redirect:/cliente/listar";
     }
 
-    @GetMapping("/cliente/eliminar/{id_cliente}")
+    @GetMapping("/eliminar/{id_cliente}")
     public String eliminarCliente(Cliente cliente) {
         clienteService.deleteCliente(cliente);
         return "redirect:/cliente/listar";
     }
 
-    @GetMapping("/cliente/editar/{id_cliente}")
+    @GetMapping("/editar/{id_cliente}")
     public String editarCliente(Cliente cliente, Model model) {
         cliente = clienteService.getCLiente(cliente);
         model.addAttribute("cliente", cliente);
-        return "agregar";
+        return "/cliente/agregar";
     }
 
 }

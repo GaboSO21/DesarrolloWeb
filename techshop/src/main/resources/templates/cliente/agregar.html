@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 
-<head>
+<head th:replace="~{layout/plantilla :: head}">
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/styles/agregar.css}">
     <title>Agregar</title>
 </head>
 
 <body>
-    <header class="flex-container header">
+    <header class="flex-container header" th:replace="~{layout/plantilla :: header}">
         <div class="header-sections">
             <ul class="header-sections-list">
                 <li class="item"><a th:href="@{/}" th:text="Inicio"></a></li>
@@ -23,7 +23,7 @@
         <div class="item1">
             <form class="form" th:action="@{/cliente/guardar}" method="post" th:object="${cliente}">
                 <input type="hidden" name="id_cliente" th:field="*{id_cliente}">
-                <input type="text" name="nombre" th:field="*{nombre}" required="true" ></input>
+                <input type="text" name="nombre" th:field="*{nombre}" required="true"></input>
                 <br>
                 <input type="text" name="apellidos" th:field="*{apellidos}"></input>
                 <br>
@@ -37,7 +37,7 @@
 
     </section>
 
-    <footer>
+    <footer th:replace="~{layout/plantilla :: footer}">
 
 
     </footer>

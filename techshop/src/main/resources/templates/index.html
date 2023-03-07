@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org" xmlns="http://w3.org/1999/xhtml">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/styles/index.css}">
-    <title>Inicio</title>
+<head th:replace="~{layout/plantilla :: head}">
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <link rel="stylesheet" th:href="@{/styles/index.css}"> -->
+    <!-- <title>Inicio</title> -->
 </head>
 
 <body>
-    <header class="flex-container header">
-        <div class="header-sections">
-            <ul class="header-sections-list">
-                <li class="item"><a th:href="@{/}" th:text="Inicio"></a></li>
-                <li class="item"><a th:href="@{/cliente/listar}" th:text="Listar"></a></li>
-                <li class="item"><a th:href="@{/cliente/agregar}" th:text="Agregar"></a></li>
-            </ul>
-        </div>
+
+    <header th:replace="~{layout/plantilla :: header}">
+
     </header>
 
-    <section class="flex-container section">
+    <!-- <header class="flex-container header"> -->
+    <!-- <div class="header-sections"> -->
+    <!-- <ul class="header-sections-list"> -->
+    <!-- <li class="item"><a th:href="@{/}" th:text="Inicio"></a></li> -->
+    <!-- <li class="item"><a th:href="@{/cliente/listar}" th:text="Listar"></a></li> -->
+    <!-- <li class="item"><a th:href="@{/cliente/agregar}" th:text="Agregar"></a></li> -->
+    <!-- </ul> -->
+    <!-- </div> -->
+    <!-- </header> -->
 
-        <div class="item1">
-            <h1>
-                Clientes
-            </h1>
-        </div>
+    <!-- <section class="flex-container section"> -->
 
-    </section>
+    <!-- <div class="item1"> -->
+    <!-- <h1> -->
+    <!-- Clientes -->
+    <!-- </h1> -->
+    <!-- </div> -->
 
-    <footer>
+    <!-- </section> -->
+
+    <footer th:replace="~{layout/plantilla :: footer}">
 
 
     </footer>

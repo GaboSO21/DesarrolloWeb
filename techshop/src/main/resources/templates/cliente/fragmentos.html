@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{layout/plantilla :: head}">
+  <title>Fragmentos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal"
+            data-bs-target="#agregarCliente">
+            <i class="fas fa-user-plus">Agregar</i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section th:fragment="agregarCliente">
+
+    <div class="modal fade" id="agregarCliente" tabindex="-1" aria-labelledby="" aria-hidden="true">
+
+      <div class="modal-content">
+
+        <div class="modal-header bg-info text-white">
+
+          <h5 class="modal-title">Agregar Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+        </div>
+
+        <form th:action="@{/cliente/guardar}" th:object="${cliente}" method="post" class="form-group">
+          <input type="hidden" name="id_cliente" th:field="*{id_cliente}">
+          <label for="">Nombre</label>
+          <input type="text" name="nombre" th:field="*{nombre}" required="true" class="form-control"></input>
+          <br>
+          <input type="text" name="apellidos" th:field="*{apellidos}"></input>
+          <br>
+          <input type="email" name="correo" th:field="*{correo}"></input>
+          <br>
+          <input type="text" name="telefono" th:field="*{telefono}"></input>
+          <br>
+          <input type="submit" name="guardar" value="Guardar">
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>
