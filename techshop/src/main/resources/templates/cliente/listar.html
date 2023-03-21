@@ -33,35 +33,39 @@
 
         </section>
 
-        <div class="item1" th:if="${!clientes.empty}">
-            <table class="table-clientes">
-                <thead>
-                    <th>Id</th>
-                    <th>Credito</th>
-                    <th>Nombre</th>
-                    <th>Eliminar</th>
-                    <th>Editar</th>
-                </thead>
+        <section th:replace="~{cliente/fragmentos :: listadoClientes}">
 
-                <tr th:each="cliente : ${clientes}">
-                    <td th:text="${cliente.id_cliente}"></td>
-                    <td th:text="${cliente.credito}"></td>
-                    <td th:text="${cliente.nombre}"></td>
-                    <td><a class="btn btn-danger" th:href="@{/cliente/eliminar/} + ${cliente.id_cliente} "
-                            th:text="Eliminar"><i class="fas fa-trash"></i></a></td>
-                    <td><a class="btn btn-success" th:href="@{/cliente/editar/} + ${cliente.id_cliente}"
-                            th:text="Editar"><i class="fas fa-pencil"></i></a></td>
-                </tr>
+        </section>
 
-            </table>
-        </div>
+        <!-- <div class="item1" th:if="${!clientes.empty}"> -->
+        <!-- <table class="table-clientes"> -->
+        <!-- <thead> -->
+        <!-- <th>Id</th> -->
+        <!-- <th>Credito</th> -->
+        <!-- <th>Nombre</th> -->
+        <!-- <th>Eliminar</th> -->
+        <!-- <th>Editar</th> -->
+        <!-- </thead> -->
 
-    </section>
+        <!-- <tr th:each="cliente : ${clientes}"> -->
+        <!-- <td th:text="${cliente.id_cliente}"></td> -->
+        <!-- <td th:text="${cliente.credito}"></td> -->
+        <!-- <td th:text="${cliente.nombre}"></td> -->
+        <!-- <td><a class="btn btn-danger" th:href="@{/cliente/eliminar/} + ${cliente.id_cliente} " -->
+        <!-- th:text="Eliminar"><i class="fas fa-trash"></i></a></td> -->
+        <!-- <td><a class="btn btn-success" th:href="@{/cliente/editar/} + ${cliente.id_cliente}" th:text="Editar"><i -->
+        <!-- class="fas fa-pencil"></i></a></td> -->
+        <!-- </tr> -->
 
-    <footer>
+        <!-- </table> -->
+        <!-- </div> -->
+
+        <!-- </section> -->
+
+        <footer th:replace="~{layout/plantilla :: footer}">
 
 
-    </footer>
+        </footer>
 </body>
 
 </html>

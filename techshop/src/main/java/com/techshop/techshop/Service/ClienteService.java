@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.techshop.techshop.Model.Cliente;
+import com.techshop.techshop.Model.Credito;
 import com.techshop.techshop.Repository.*;
 
 @Service
@@ -13,8 +14,11 @@ public class ClienteService {
 
     private ClienteRepository clienteRepository;
 
-    public ClienteService(ClienteRepository clienteRepository) {
+    private CreditoRepository creditoRepository;
+
+    public ClienteService(ClienteRepository clienteRepository, CreditoRepository creditoRepository) {
         this.clienteRepository = clienteRepository;
+        this.creditoRepository = creditoRepository;
     }
 
     // Makes query READ ONLY, transaction much faster
@@ -29,12 +33,16 @@ public class ClienteService {
     }
 
     @Transactional
-    public void saveCliente (Cliente cliente) {
-       clienteRepository.save(cliente); 
-    } 
+    public void saveCliente(Cliente cliente) {
+        Credito credito = cliente.getCredito();
+        credito = creditoRepository.save(credito);
+        cliente.setCredito(credito);
+
+        clienteRepository.save(cliente);
+    }
 
     @Transactional
-    public void deleteCliente (Cliente cliente) {
+    public void deleteCliente(Cliente cliente) {
         clienteRepository.deleteById(cliente.getId_cliente());
     }
 

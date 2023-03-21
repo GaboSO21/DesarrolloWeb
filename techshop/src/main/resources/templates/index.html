@@ -13,6 +13,27 @@
 
     </header>
 
+    <div class="container">
+
+        <div class="row row-cols-3">
+
+            <div th:each="articulo : ${articulos}" class="card">
+
+                <div class="card-body">
+
+                    <img th:src="${articulo.imagen}" alt="">
+                    <h5 class="card-title">[[${articulo.descripcion}]]</h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-end">[[${articulo.precio}]]</h6>
+                    <a class="card-link" th:href="@{/carrito/comprar/} + ${articulo.id_articulo}"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- <header class="flex-container header"> -->
     <!-- <div class="header-sections"> -->
     <!-- <ul class="header-sections-list"> -->
