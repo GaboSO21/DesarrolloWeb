@@ -1,54 +1,53 @@
 package com.techshop.techshop.Controller;
 
+import com.techshop.techshop.Model.Articulo;
+import com.techshop.techshop.Service.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.techshop.techshop.Model.Articulo;
-import com.techshop.techshop.Service.*;
-
+@Service
 @Controller
 @RequestMapping("/articulo")
 public class ArticuloController {
 
+    @Autowired
     private ArticuloService articuloService;
 
-    public ArticuloController(ArticuloService articuloService) {
-        this.articuloService = articuloService;
-    }
-
-    @GetMapping("/listar")
-    public String listar(Model model) {
+    @GetMapping("/listado")
+    public String inicio(Model model) {
         var articulos = articuloService.listarArticulos();
         model.addAttribute("articulos", articulos);
-        model.addAttribute("totalArticulos", articulos.size());
-        return "/articulo/listar";
+        return "/articulo/listado";
     }
 
-    @GetMapping("/agregar")
-    public String agregarArticulo(Articulo articulo) {
-        return "/articulo/agregar";
+    @GetMapping("/nuevo")
+    public String articuloNuevo(Articulo articulo) {
+        return "/articulo/modificar";
     }
 
     @PostMapping("/guardar")
-    public String guardarArticulo(Articulo articulo) {
+    public String articuloGuardar(Articulo articulo) {
         articuloService.saveArticulo(articulo);
-        return "redirect:/articulo/listar";
+        return "redirect:/articulo/listado";
     }
 
-    @GetMapping("/eliminar/{id_articulo}")
-    public String eliminarArticulo(Articulo articulo) {
+    @GetMapping("/eliminar/{idArticulo}")
+    public String articuloEliminar(Articulo articulo) {
         articuloService.deleteArticulo(articulo);
-        return "redirect:/articulo/listar";
+        return "redirect:/articulo/listado";
     }
 
-    @GetMapping("/editar/{id_cliente}")
-    public String editarCliente(Articulo articulo, Model model) {
+    @GetMapping("/modificar/{idArticulo}")
+    public String articuloModificar(Model model, Articulo articulo) {
         articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo", articulo);
-        return "/articulo/agregar";
+        return "/articulo/modificar";
     }
 
 }

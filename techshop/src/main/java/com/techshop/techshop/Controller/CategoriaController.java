@@ -1,56 +1,53 @@
 package com.techshop.techshop.Controller;
 
-import java.util.List;
+import com.techshop.techshop.Model.Categoria;
+import com.techshop.techshop.Service.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.techshop.techshop.Model.Categoria;
-import com.techshop.techshop.Service.*;
-
+@Service
 @Controller
 @RequestMapping("/categoria")
 public class CategoriaController {
 
+    @Autowired
     private CategoriaService categoriaService;
 
-    public CategoriaController(CategoriaService categoriaService) {
-        this.categoriaService = categoriaService;
-    }
-
-    @GetMapping("/listar")
-    public String listar(Model model) {
-        List<Categoria> categorias = categoriaService.listarCategorias(false);
+    @GetMapping("/listado")
+    public String inicio(Model model) {
+        var categorias = categoriaService.listarCategorias(false);
         model.addAttribute("categorias", categorias);
-        model.addAttribute("totalCategorias", categorias.size());
-        return "/categoria/listar";
+        return "/categoria/listado";
     }
 
-    @GetMapping("/agregar")
-    public String agregarCategoria(Categoria categoria) {
-        return "/categoria/agregar";
+    @GetMapping("/nuevo")
+    public String categoriaNuevo(Categoria categoria) {
+        return "/categoria/modificar";
     }
 
     @PostMapping("/guardar")
-    public String guardarCategoria(Categoria categoria) {
+    public String categoriaGuardar(Categoria categoria) {
         categoriaService.saveCategoria(categoria);
-        return "redirect:/categoria/listar";
+        return "redirect:/categoria/listado";
     }
 
-    @GetMapping("/eliminar/{id_categoria}")
-    public String eliminarCategoria(Categoria categoria) {
+    @GetMapping("/eliminar/{idCategoria}")
+    public String categoriaEliminar(Categoria categoria) {
         categoriaService.deleteCategoria(categoria);
-        return "redirect:/categoria/listar";
+        return "redirect:/categoria/listado";
     }
 
-    @GetMapping("/editar/{id_categoria}")
-    public String editarCategoria(Categoria categoria, Model model) {
+    @GetMapping("/modificar/{idCategoria}")
+    public String categoriaModificar(Model model, Categoria categoria) {
         categoria = categoriaService.getCategoria(categoria);
         model.addAttribute("categoria", categoria);
-        return "/categoria/agregar";
+        return "/categoria/modificar";
     }
 
 }
